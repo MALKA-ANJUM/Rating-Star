@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(186, 199, 74);
+}
+p{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+.rate{
+   
+    display: flex;
+    align-items: center;
+    width: 250px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 40px auto;
+    position: relative;  
+}
+.rate input{
+    display: none;   
+}
+.rate > label{
+    width: 10px;
+    height: 70px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 70px;
+    color: brown;
+    transition: 0.5s ease;
+}
+.rate > label:hover{
+    color: green;
+    transition: 0.5s ease;
+}
+.rate > label::before{
+    content: '\2606';
+    position: absolute;
+    top: 0;
+    line-height: 30px;
+}
+.rate input:checked ~ label:before{
+    content: '\2605';
+}
+
